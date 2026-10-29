@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-29T15:38:58.419Z",
+  "bb": "0.48.0",
+  "results": [
+    "desktop button, opens sidebar, scrolls and focuses current thread without changing preferences or URL",
+    "collapsed current project opens; unrelated collapse, grouping, filtering and sorting remain intact",
+    "native default Ctrl+Shift+L shortcut",
+    "shortcut reassignment through BB settings; old shortcut stops working",
+    "child thread with a manually collapsed parent under unread grouping",
+    "excluded thread reports the filter and leaves all preferences untouched",
+    "reload and disable/enable clean up the button and do not duplicate it",
+    "mobile header button opens the drawer and positions the current thread",
+    "New thread does not show an inapplicable button",
+    "no frontend exceptions",
+    "each of two split panes reveals its own thread",
+    "archived current thread with archived filter; settings stay intact"
+  ],
+  "frontendErrors": []
+}

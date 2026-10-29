@@ -1,0 +1,50 @@
+{
+  "name": "bb-plugin-thread-reveal",
+  "version": "0.1.0",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artbear/bb-plugin-thread-reveal.git"
+  },
+  "homepage": "https://github.com/artbear/bb-plugin-thread-reveal#readme",
+  "bugs": {
+    "url": "https://github.com/artbear/bb-plugin-thread-reveal/issues"
+  },
+  "engines": {
+    "bb": ">=0.48.0",
+    "bbPluginSdk": ">=0.6.94"
+  },
+  "bb": {
+    "name": "Thread Reveal",
+    "description": "Показать текущий тред в боковом списке, сохранив группировку и фильтры.",
+    "branding": {
+      "icon": "ListTree"
+    },
+    "server": "./server.ts",
+    "app": "./app.tsx",
+    "skills": []
+  },
+  "dependencies": {
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@get-bb/plugin-sdk": "0.6.94",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "better-sqlite3": "^13.0.3",
+    "cron-parser": "^5.10.2",
+    "hono": "^4.13.14",
+    "jsdom": "^30.1.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sonner": "^1.7.4",
+    "typescript": "^5.7.0"
+  },
+  "scripts": {
+    "build": "bb plugin build",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test *.test.mjs"
+  }
+}
