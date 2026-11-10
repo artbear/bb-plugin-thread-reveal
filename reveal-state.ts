@@ -39,7 +39,7 @@ export function planExpansion(
 ): { key: CollapseKey; value: string[] }[] {
   const target = chain[0];
   const root = chain.at(-1);
-  if (!target || !root) throw new Error("Не удалось определить тред.");
+  if (!target || !root) throw new Error("Could not identify the thread.");
   const pinned = chain.some((thread) => thread.isPinned);
   const mode = preferences.organizationMode;
   const group = pinned
@@ -57,7 +57,7 @@ export function planExpansion(
     !preferences.threadLifecycles.includes(lifecycle) ||
     preferences.hiddenGroups.includes(group)
   ) {
-    throw new Error("Тред скрыт текущими фильтрами или настройками видимости списка. Настройки сохранены.");
+    throw new Error("The thread is hidden by the current filters or list visibility settings. Settings are unchanged.");
   }
   const remove: Record<CollapseKey, Set<string>> = {
     collapsedThreads: new Set(chain.slice(1).map((thread) => thread.id)),

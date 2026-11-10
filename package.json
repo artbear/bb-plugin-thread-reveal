@@ -16,7 +16,7 @@
   },
   "bb": {
     "name": "Thread Reveal",
-    "description": "Показать текущий тред в боковом списке, сохранив группировку и фильтры.",
+    "description": "Reveal the current thread in the sidebar while preserving grouping and filters.",
     "branding": {
       "icon": "ListTree"
     },

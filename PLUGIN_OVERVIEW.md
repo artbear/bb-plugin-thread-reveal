@@ -1,7 +1,9 @@
-Возвращает к текущему треду в боковом списке BB с сохранением группировки, сортировки и фильтров.
+## Find the current thread
 
-Кнопка находится сразу справа от названия треда. Ctrl+Shift+L (⌘+Shift+L на macOS) выполняет то же действие; хоткей можно переназначить в Settings → Keyboard. Нужная ветка раскрывается, список прокручивается к треду, строка получает фокус и кратковременную обводку.
+A button immediately to the right of the thread title expands its branch, scrolls the sidebar to its row, focuses it, and briefly outlines it. Ctrl+Shift+L (⌘+Shift+L on macOS) performs the same action. Reassign the shortcut in Settings → Keyboard.
 
-Работает со штатным Thread list в BB 0.48.0+, включая вложенные треды, несколько панелей и мобильный экран. Если тред исключён текущим фильтром или скрытой группой, плагин сообщает об этом, сохраняя настройки.
+Grouping, sorting, and filters are preserved. If the current filter or a hidden group excludes the thread, the plugin explains this and leaves visibility settings unchanged.
 
-Дополнительных сервисов, учётных записей и настроек плагина нет.
+## Requirements
+
+BB 0.48.0+, Plugin SDK 0.6.94+, and BB's built-in Thread list. Nested threads, multiple panes, and mobile layouts are supported. No additional services, accounts, or plugin settings are required.

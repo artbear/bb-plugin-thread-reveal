@@ -1,4 +1,4 @@
-export const BUTTON_LABEL = "Показать тред в списке";
+export const BUTTON_LABEL = "Reveal thread in list";
 const BUTTON = "data-thread-reveal-button";
 const HEADERS = '[data-thread-header-workflow-actions]';
 

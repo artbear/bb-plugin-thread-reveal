@@ -79,7 +79,7 @@ test('keeps lifecycle and visibility filters intact when they exclude the thread
     [prefs(), thread({ isHidden: true })],
   ]) {
     const before = structuredClone(preferences);
-    assert.throws(() => planExpansion(preferences, [target], 'personal'), /скрыт/);
+    assert.throws(() => planExpansion(preferences, [target], 'personal'), /hidden/);
     assert.deepEqual(preferences, before);
   }
   assert.deepEqual(planExpansion(prefs({ threadLifecycles: ['active', 'archived'] }),

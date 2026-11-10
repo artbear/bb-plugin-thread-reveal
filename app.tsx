@@ -94,7 +94,7 @@ async function reveal(doc: Document, current: Context, threadId: string, signal:
   }
   const row = await revealRow(doc, chain.map((thread) => thread.id), signal);
   signal.throwIfAborted();
-  if (!row) throw new Error("Не удалось показать тред в текущем списке. Фильтры и группировка сохранены.");
+  if (!row) throw new Error("Could not reveal the thread in the current list. Filters and grouping are unchanged.");
   row.setAttribute("data-thread-reveal-highlight", "");
 }
 
@@ -102,7 +102,7 @@ export default definePluginApp((app) => {
   app.slots.experimental_appOverlay({ id: "context", component: ContextBridge });
   app.commands.register({
     id: "reveal-current-thread",
-    title: "Показать текущий тред в списке",
+    title: "Reveal current thread in list",
     defaultShortcut: { key: "l", mod: true, shift: true },
     isAvailable: ({ threadId }) => threadId !== null,
     run: ({ threadId }) => { if (threadId) invoke?.(threadId); },
@@ -125,7 +125,7 @@ export default definePluginApp((app) => {
         void reveal(document, context, threadId, activeSignal).then(() => {
           highlightTimer = setTimeout(clearHighlight, 1800);
         }, (error: unknown) => {
-          if (!activeSignal.aborted) toast.error(error instanceof Error ? error.message : "Не удалось показать тред в списке.");
+          if (!activeSignal.aborted) toast.error(error instanceof Error ? error.message : "Could not reveal the thread in the list.");
         });
       };
       const buttons = mountHeaderButtons(document, signal, (header) => {
